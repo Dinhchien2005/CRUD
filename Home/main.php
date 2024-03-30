@@ -15,16 +15,26 @@ function getListProduct($records_of_page, $pages)
      $result = $conn->query($query);
      return $result;
 }
+function SearchKeyWords($keyword)
+{
+     global $conn;
+     $keyword = $conn->real_escape_string($keyword);
+     $query = "SELECT * FROM restaurant WHERE is_available=1 AND (table_number LIKE '%$keyword%' OR capacity LIKE '%$keyword%' OR location LIKE '%$keyword%' OR description LIKE '%$keyword%')";
+     $result = $conn->query($query);
+     return $result;
+}
 $records_of_page = 5;
 if (isset($_GET["page"]) && is_numeric($_GET['page'])) {
      $page = $_GET['page'];
 } else {
      $page = 1;
 }
-$result = getListProduct($records_of_page, $page);
-
-
-
+if (isset($_GET['search']) && isset($_GET['keyword'])) {
+     $keyword = $_GET['keyword'];
+     $result = SearchKeyWords($keyword);
+} else {
+     $result = getListProduct($records_of_page, $page);
+}
 $username = $_COOKIE['username'];
 ?>
 
@@ -95,6 +105,10 @@ $username = $_COOKIE['username'];
                <th>Last Updated</th>
                <th>Action</th>
           </tr>
+          <form action="" method="GET">
+               <input type="text" name="keyword" placeholder="Search">
+               <button type="submit" name="search">Search</button>
+          </form>
           <?php
           if ($result->num_rows > 0) {
                $stt = ($page - 1) * $records_of_page + 1;

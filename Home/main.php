@@ -106,7 +106,7 @@ $username = $_COOKIE['username'];
                <th>Action</th>
           </tr>
           <form action="" method="GET">
-               <input type="text" name="keyword" placeholder="Search">
+               <input type="text" name="keyword" placeholder="Enter keyword">
                <button type="submit" name="search">Search</button>
           </form>
           <?php

@@ -89,7 +89,7 @@ $username = $_COOKIE['username'];
                <th>Capacity</th>
                <th>Location</th>
                <th>Description</th>
-               <th>Is Reserved</th>
+               <th>Reserved</th>
                <th>Available</th>
                <th>Created At</th>
                <th>Last Updated</th>

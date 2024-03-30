@@ -79,7 +79,7 @@ $username = $_COOKIE['username'];
 </head>
 
 <body>
-     <h2>Xin chào
+     <h2>Welcome
           <?php echo $username; ?>
      </h2>
      <table border="1" cellspacing="0" cellpadding="10">

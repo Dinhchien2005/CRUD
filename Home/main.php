@@ -85,6 +85,36 @@ $username = $_COOKIE['username'];
           .add:hover {
                background-color: #45a049;
           }
+
+          form {
+               margin-bottom: 20px;
+               display: flex;
+          }
+
+          input[type="text"] {
+               width: 200px;
+               padding: 10px;
+               border: 1px solid #ccc;
+               border-radius: 5px 0 0 5px;
+               outline: none;
+          }
+
+          button[name="search"] {
+               background-color: #007bff;
+               border: none;
+               color: white;
+               padding: 10px 20px;
+               text-align: center;
+               text-decoration: none;
+               display: inline-block;
+               font-size: 16px;
+               cursor: pointer;
+               border-radius: 5px;
+          }
+
+          button[name="search"]:hover {
+               background-color: #0056b3;
+          }
      </style>
 </head>
 

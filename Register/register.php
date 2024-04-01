@@ -1,3 +1,7 @@
+<?php
+require_once ("check_register.php")
+     ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,14 +9,14 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Register</title>
-     <!-- Thêm các tệp CSS của Bootstrap -->
      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
 
 <body>
      <div class="container">
-          <h1 class="mt-5">Registration Form</h1>
-          <form action="" method="post" class="mt-3">
+          <h1>Registration Form</h1>
+          <form action="" method="post">
                <div class="form-group">
                     <label for="full_name">Full name:</label>
                     <input type="text" class="form-control" id="full_name" name="full_name"
@@ -34,13 +38,13 @@
                          value="<?php echo isset($_POST['dob']) ? htmlspecialchars($_POST['dob']) : ''; ?>">
                </div>
                <div class="form-group">
-                    <label for="gender">Gender:</label>
+                    <label>Gender:</label>
                     <div>
-                         <input type="radio" id="male" name="gender" value="1" class="mr-2">
+                         <input type="radio" id="male" name="gender" value="1">
                          <label for="male">Nam</label>
-                         <input type="radio" id="female" name="gender" value="2" class="ml-3 mr-2">
+                         <input type="radio" id="female" name="gender" value="2">
                          <label for="female">Nữ</label>
-                         <input type="radio" id="other" name="gender" value="3" class="ml-3 mr-2">
+                         <input type="radio" id="other" name="gender" value="3">
                          <label for="other">Khác</label>
                     </div>
                </div>
@@ -55,13 +59,13 @@
                <button type="submit" class="btn btn-primary" name="submit">Submit</button>
                <a href="../login/login.php" class="btn btn-link">Login</a>
           </form>
-
-          <?php
-          if (isset($check)) {
-               echo $check;
-          }
-          ?>
      </div>
+
+     <?php
+     if (isset($check)) {
+          echo '<div class="alert alert-danger mt-3" role="alert">' . $check . '</div>';
+     }
+     ?>
 
 
 </body>

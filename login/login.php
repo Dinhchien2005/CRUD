@@ -9,10 +9,8 @@ require_once ("check_login.php");
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Login</title>
-     <!-- Bootstrap CSS -->
      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
      <style>
-          /* Add your custom styles here */
      </style>
 </head>
 
@@ -22,13 +20,15 @@ require_once ("check_login.php");
                <div class="form-group row">
                     <label for="username" class="col-sm-2 col-form-label">Username:</label>
                     <div class="col-sm-10">
-                         <input type="text" class="form-control" id="username" name="username" required>
+                         <input type="text" class="form-control" id="username" name="username" value="<?php if (isset($_POST['username']))
+                              echo $_POST['username']; ?>" required>
                     </div>
                </div>
                <div class="form-group row">
                     <label for="password" class="col-sm-2 col-form-label">Password:</label>
                     <div class="col-sm-10">
-                         <input type="password" class="form-control" id="password" name="password" required>
+                         <input type="password" class="form-control" id="password" name="password" value="<?php if (isset($_POST['password']))
+                              echo $_POST['password']; ?>" required>
                     </div>
                </div>
                <div class="form-group row">

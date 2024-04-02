@@ -1,0 +1,39 @@
+create table users (
+    user_id int auto_increment primary key,
+    full_name varchar(50) CHARACTER SET utf8mb4,
+    username varchar(50),
+    email varchar(255),
+    dob date,
+    gender int, 
+    password varchar(255),
+    registration_date timestamp default current_timestamp,
+    is_banned boolean default 0
+);
+CREATE TABLE resturant(
+table_id INT AUTO_INCREMENT PRIMARY KEY,
+table_number INT NOT NULL,
+capacity INT NOT NULL,
+location VARCHAR(100),
+description TEXT,
+is_reserved BOOLEAN DEFAULT FALSE,
+is_outdoor BOOLEAN DEFAULT FALSE,
+is_available BOOLEAN DEFAULT TRUE,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+last_updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+INSERT INTO restaurant(table_number, capacity, location, description) VALUES
+(1, 4, 'Main Dining Area', 'Square table near the window'),
+(2, 6, 'Main Dining Area', 'Round table in the corner'),
+(3, 2, 'Patio', 'Small table for couples'),
+(4, 8, 'Main Dining Area', 'Large table for groups'),
+(5, 4, 'Main Dining Area', 'Rectangular table near the entrance'),
+(6, 2, 'Patio', 'Table with umbrella'),
+(7, 4, 'Main Dining Area', 'Circular table near the bar'),
+(8, 6, 'Private Room', 'Table reserved for events'),
+(9, 3, 'Main Dining Area', 'Table for small families'),
+(10, 2, 'Patio', 'Table with a view'),
+(11, 4, 'Main Dining Area', 'Table by the fireplace'),
+(12, 6, 'Main Dining Area', 'Large round table for gatherings'),
+(13, 2, 'Patio', 'Cozy table for couples'),
+(14, 4, 'Main Dining Area', 'Rectangular table by the window'),
+(15, 8, 'Private Room', 'VIP table');

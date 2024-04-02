@@ -32,72 +32,72 @@ function getDetailProduct()
           if (getDetailProduct()->num_rows > 0) {
                $data = getDetailProduct()->fetch_assoc();
                ?>
-          <tr>
-               <th>Table Number</th>
-               <td>
-                    <?php echo $data['table_number']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>Capacity</th>
-               <td>
-                    <?php echo $data['capacity']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>PricLocation</th>
-               <td>
-                    <?php echo $data['location']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>Description</th>
-               <td>
-                    <?php echo $data['description']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>Is Reserved</th>
-               <td>
-                    <?php echo $data['is_reserved']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>Available</th>
-               <td>
-                    <?php echo $data['is_available']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>Created At</th>
-               <td>
-                    <?php echo $data['created_at']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>Last Update</th>
-               <td>
-                    <?php echo $data['last_updated_at']; ?>
-               </td>
-          </tr>
-          <tr>
-               <th>Action</th>
-               <td>
-                    <a href="#" value="">Edit</a>
-                    <a href="#" value="">Delete</a>
-               </td>
-          </tr>
-          <tr>
-               <td>
-                    <a href="main.php">Back to View List Product</a>
-               </td>
-          </tr>
-          <?php
+               <tr>
+                    <th>Table Number</th>
+                    <td>
+                         <?php echo $data['table_number']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Capacity</th>
+                    <td>
+                         <?php echo $data['capacity']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Location</th>
+                    <td>
+                         <?php echo $data['location']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Description</th>
+                    <td>
+                         <?php echo $data['description']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Is Reserved</th>
+                    <td>
+                         <?php echo $data['is_reserved']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Available</th>
+                    <td>
+                         <?php echo $data['is_available']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Created At</th>
+                    <td>
+                         <?php echo $data['created_at']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Last Update</th>
+                    <td>
+                         <?php echo $data['last_updated_at']; ?>
+                    </td>
+               </tr>
+               <tr>
+                    <th>Action</th>
+                    <td>
+                         <a href="#" value="">Edit</a>
+                         <a href="#" value="">Delete</a>
+                    </td>
+               </tr>
+               <tr>
+                    <td>
+                         <a href="main.php">Back to View List Product</a>
+                    </td>
+               </tr>
+               <?php
           } else {
                ?>
-          <tr>
-               <td colspan="8">No data found</td>
-          </tr>
+               <tr>
+                    <td colspan="8">No data found</td>
+               </tr>
           <?php } ?>
      </table>
 </body>

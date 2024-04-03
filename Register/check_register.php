@@ -76,7 +76,7 @@ if (isset($_POST['submit'])) {
           if ($regis_success) {
                $regis_success = registration_success($full_name, $username, $email, $dob, $gender, $password);
                if ($regis_success) {
-                    header('Location: ../Verify/verify.php');
+                    header('Location: ../Verify/verify_password.php');
                     exit();
                } else {
                     $check = "Registration failed. Please try again later.";
